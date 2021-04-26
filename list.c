@@ -8,6 +8,33 @@
 #include <stdlib.h>
 #include "list.h"
 
+void printList(node** head) {
+
+	node* current = *head;
+	while (current->next != NULL) {
+		printf("\nCurrent: %c\n", current->color);
+		current = current->next;
+	}
+	printf("\nCurrent: %c\n", current->color);
+}
+
+void printListReverse(node** head) {
+	node* current = *head;
+	node* print = NULL;
+
+	if (current->next == NULL) {
+		printf("Reverse: %c\n", current->color);
+		return ;
+	}
+	
+
+	printListReverse(&(current->next));
+	printf("Reverse: %c\n", current->color);
+	
+	
+
+	
+}
 
 void insertAtEnd(node** head, char color) {
 

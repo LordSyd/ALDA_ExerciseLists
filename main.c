@@ -5,11 +5,12 @@
 int main(){
     node* head = NULL;
 
-    insertAtHead(&head, 't');
-    insertAtEnd(&head, 'c');
-    insertAfterKey(&head, 's', 1);
+    insertAtHead(&head, '1'); //works
+    insertAtEnd(&head, '3'); //works
+    insertAfterKey(&head, '2', 1); //works
 
-    printf("test: %c", head->next->next->color);
+    //printf("test: %c", head->next->next->color);
+    printListReverse(&head);
 
     return 0;
 }

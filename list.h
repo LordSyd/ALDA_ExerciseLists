@@ -20,10 +20,14 @@ struct _node
 
 typedef struct _node node;
 
-void insertAtEnd(node* head, char color);
+void printList(node** head);
+
+void printListReverse(node** head);
+
+void insertAtEnd(node** head, char color);
 
 void insertAtHead(node** head, char color);
 
-void insertAfterKey(node* head, char color, int key);
+void insertAfterKey(node** head, char color, int key);
 
 #endif /* list_h */
